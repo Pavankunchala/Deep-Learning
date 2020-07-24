@@ -1,6 +1,6 @@
 #Tensorflow
 
-*To install tensorflow type the following code
+* To install tensorflow type the following code
 
 ```
 pip install --upgrade tensorflow
