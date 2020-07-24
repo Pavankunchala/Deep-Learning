@@ -21,6 +21,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 np.set_printoptions(linewidth=200)
 
+#callbacks
+
+class myCallback(tf.keras.callbacks.Callback):
+    
+    def on_epoch_end(self,epoch,logs = {}):
+        
+        
+        
+        if(logs.get('accuracy')>0.6):
+            
+            print("\nReached 60% accuracy so cancelling training!")
+            self.model.stop_training = True
+
 #just for the sake visualization
 
 plt.imshow(training_images[0])
@@ -48,9 +61,10 @@ model.compile(optimizer = tf.optimizers.Adam(),
               loss = 'sparse_categorical_crossentropy',
               metrics = ['accuracy'])
 
+callbacks = myCallback()
 
 
-model.fit(training_images, training_labels, epochs=10)
+model.fit(training_images, training_labels, epochs=10,callbacks = [callbacks])
 
 model.evaluate(test_images, test_labels)
 
