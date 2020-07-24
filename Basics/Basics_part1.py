@@ -6,6 +6,10 @@ from tensorflow import keras
 
 #defining a model
 
+"here we are trying to find a relation between X and Y and you can see  y = 2x -1 (more probable)"
+
+
+
 model = tf.keras.Sequential([keras.layers.Dense(units = 1,input_shape =[1])])
 
 
