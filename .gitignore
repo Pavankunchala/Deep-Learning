@@ -2,3 +2,5 @@
 exoplanet hunting/exoTest.csv
 exoplanet hunting/exoTrain.csv
 Credit Card Fraud Detection/creditcard.csv
+Sentiment_Analysis_LSTM/test.csv
+Sentiment_Analysis_LSTM/train.csv
