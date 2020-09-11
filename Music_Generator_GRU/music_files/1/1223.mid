@@ -1,0 +1,25 @@
+HTTP/1.0 403 Forbidden
+Date: Thu, 15 Mar 2001 03:45:07 GMT
+Last-Modified: Fri, 08 Dec 2000 17:39:05 GMT
+ETag: "2b72a-22d5-3a311cb9"
+Accept-Ranges: bytes
+X-Host: www75
+Content-Length: 9103
+Connection: close
+Content-Type: text/html
+
+HTTP/1.0 200 OK
+Date: Thu, 15 Mar 2001 03:45:07 GMT
+Connection: close
+Content-Type: text/html
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML><HEAD>
+<TITLE>200 OK</TITLE>
+</HEAD><BODY>
+<H1>OK</H1>
+You don't have permission to access /Athens/Delphi/7261/Midi/1.mid
+on this server.<P>
+<P>Additionally, a 403 Forbidden
+error was encountered while trying to use an ErrorDocument to handle the request.
+</BODY></HTML>
