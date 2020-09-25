@@ -58,7 +58,7 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_frontalf
 eye_cascade  = cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_eye.xml") # default cascade
 nose_cascade = cv2.CascadeClassifier(os.path.join(os.getcwd(),'haarcascade_mcs_nose.xml')) # local included cascade
 
-mustache = cv2.imread('it.png',-1)
+mustache = cv2.imread('img.png',-1)
 oh,ow = mustache.shape[:2]
 
 draw_mustache = True  # toggle = m
