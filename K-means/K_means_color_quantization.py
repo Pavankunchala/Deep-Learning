@@ -10,6 +10,7 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 import collections
+import dlib
 
 
 def show_img_with_matplotlib(color_img, title, pos):
