@@ -25,11 +25,11 @@ def show_detection(image,faces):
     
     for face in faces:
         
-        cv2.rectangle(image,(face.left(), face.top()),(face.right(),face.bottom()),(0,0,255),5)
+        cv2.rectangle(image,(face.left(), face.top()),(face.right(),face.bottom()),(0,0,255),3)
         
     return image
 
-img = cv2.imread('group')
+img = cv2.imread('images.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 #loading fronatal face detecor of dlib
@@ -37,6 +37,8 @@ detector = dlib.get_frontal_face_detector()
 
 # Detect faces:
 rects_1 = detector(gray, 0)
+
+#here we are upsampling the img(increasing the size of the img) but takes more performance
 rects_2 = detector(gray, 1)
 
 #draw detections
