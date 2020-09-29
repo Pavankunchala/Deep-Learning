@@ -68,7 +68,7 @@ while True:
     # We capture the keyboard event
     key = 0xFF & cv2.waitKey(1)
 
-    # Press '1' to re-initialize tracking (it will detect the face again):
+    # Press '1' to re-initialie tracking (it will detect the face again):
     if key == ord("1"):
         tracking_face = False
 
