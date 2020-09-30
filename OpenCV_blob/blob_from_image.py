@@ -67,5 +67,3 @@ show_img_with_matplotlib(img_from_blob_mean_swap, "img from blob mean swap " + s
 # Show the Figure:
 plt.show()
 
-    
-    
