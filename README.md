@@ -24,15 +24,21 @@ pip install --upgrade tensorflow
 
 * [Face Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face%20Detection%20All%20Models)
 
-* ![Face-Detection-img](https://github.com/Pavankunchala/Deep-Learning/blob/master/Face-Detection-All%20Models/Face_detection_dlib/dlib_soln.png)
+ ![Face-Detection-img](https://github.com/Pavankunchala/Deep-Learning/blob/master/Face-Detection-All%20Models/Face_detection_dlib/dlib_soln.png)
  
 * [Facial Landmark Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Facial_landmarks)
 
 * [QR Code Scanner](https://github.com/Pavankunchala/Deep-Learning/tree/master/QR_Code_Detection)
 
+![QR-code-img](https://github.com/Pavankunchala/Deep-Learning/blob/master/QR_Code_Detection/qr_solution.png)
+
 * [Face Recognisation](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face-Recognisation)
 
 * [OpenCV-Basics](https://github.com/Pavankunchala/Deep-Learning/tree/master/Open-CV_Basics)
+
+* [K-means](https://github.com/Pavankunchala/Deep-Learning/tree/master/K-means)
+
+![color_quantization_k](https://github.com/Pavankunchala/Deep-Learning/blob/master/K-means/solution_color_quantization.png)
 
 
 
