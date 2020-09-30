@@ -34,11 +34,17 @@ pip install --upgrade tensorflow
 
 * [Face Recognisation](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face-Recognisation)
 
+![Face-Recog-img](https://github.com/Pavankunchala/Deep-Learning/blob/master/Face-Recognisation/img.jpg)
+
 * [OpenCV-Basics](https://github.com/Pavankunchala/Deep-Learning/tree/master/Open-CV_Basics)
 
 * [K-means](https://github.com/Pavankunchala/Deep-Learning/tree/master/K-means)
 
 ![color_quantization_k](https://github.com/Pavankunchala/Deep-Learning/blob/master/K-means/solution_color_quantization.png)
+
+* [Face-Tracking](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face-Tracking)
+
+
 
 
 
