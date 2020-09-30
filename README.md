@@ -24,7 +24,7 @@ pip install --upgrade tensorflow
 
 * [Face Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face%20Detection%20All%20Models)
 
- ![Face Detection img] (https://github.com/Pavankunchala/Deep-Learning/blob/master/Face-Detection-All%20Models/Face_detection_dlib/dlib_soln.png)
+* ![Face Detection img] (https://github.com/Pavankunchala/Deep-Learning/blob/master/Face-Detection-All%20Models/Face_detection_dlib/dlib_soln.png)
  
 * [Facial Landmark Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Facial_landmarks)
 
