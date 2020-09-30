@@ -46,6 +46,10 @@ pip install --upgrade tensorflow
 
 ![face-tracking](https://github.com/Pavankunchala/Deep-Learning/blob/master/Face-Tracking/FaceTracking.jpg)
 
+* [Alex-net-Image-classification](https://github.com/Pavankunchala/Deep-Learning/tree/master/Alexnet-OpenCV)
+
+![alex-net](https://github.com/Pavankunchala/Deep-Learning/blob/master/Alexnet-OpenCV/alexnet_soln.png)
+
 
 
 
