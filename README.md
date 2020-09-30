@@ -15,8 +15,6 @@ pip install --upgrade tensorflow
 
 ### Contents
 
-* [Face Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face%20Detection)
-
 
 * [Text Generation](https://github.com/Pavankunchala/Deep-Learning/tree/master/Text-Generation)
 
@@ -24,7 +22,18 @@ pip install --upgrade tensorflow
 
 * [Credit Card Fraud Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Credit%20Card%20Fraud%20Detection)
 
-*[Face Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face%20Detection%20All%20Models)
+* [Face Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face%20Detection%20All%20Models)
+
+* [Facial Landmark Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Facial_landmarks)
+
+* [QR Code Scanner](https://github.com/Pavankunchala/Deep-Learning/tree/master/QR_Code_Detection)
+
+* [Face Recognisation](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face-Recognisation)
+
+* [OpenCV-Basics](https://github.com/Pavankunchala/Deep-Learning/tree/master/Open-CV_Basics)
+
+
+
 
 
 
