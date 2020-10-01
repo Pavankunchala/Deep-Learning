@@ -22,7 +22,7 @@ pip install --upgrade tensorflow
 
 * [Credit Card Fraud Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Credit%20Card%20Fraud%20Detection)
 
-* [Face Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face%20Detection%20All%20Models)
+* [Face Detection](https://github.com/Pavankunchala/Deep-Learning/tree/master/Face-Detection-All%20Models)
 
  ![Face-Detection-img](https://github.com/Pavankunchala/Deep-Learning/blob/master/Face-Detection-All%20Models/Face_detection_dlib/dlib_soln.png)
  
