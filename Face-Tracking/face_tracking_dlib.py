@@ -25,6 +25,7 @@ def draw_text_info():
                     (0, 0, 255))
     
 capture = cv2.VideoCapture(0)
+cv2.waitKey(0)
 
 #frontal face detector
 detector = dlib.get_frontal_face_detector()
@@ -43,6 +44,8 @@ while True:
     draw_text_info()
     
     if tracking_face is False:
+
+        
         
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         
@@ -58,6 +61,7 @@ while True:
             tracking_face = True
             
     if tracking_face is True:
+
         
         print(tracker.update(frame))
         # Get the position of the tracked object:
