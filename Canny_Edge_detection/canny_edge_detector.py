@@ -30,12 +30,12 @@ edges = cv2.Canny(gray,lower,higher)
 wide = cv2.Canny(gray,30,100)
 tight = cv2.Canny(gray,180,240)
 
-plt.subplot(131)
+#plt.subplot(131)
 cv2.imshow("Edges",edges)
-plt.subplot(132)
+#plt.subplot(132)
 
 cv2.imshow("Wide",wide)
-plt.subplot(133)
+#plt.subplot(133)
 
 cv2.imshow("Tight",tight)
 
