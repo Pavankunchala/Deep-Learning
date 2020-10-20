@@ -26,7 +26,7 @@ plt.imshow(edges,cmap='gray')
 rho = 1
 thetha = np.pi/180
 threshold = 60
-max_line_length= 50
+max_line_length= 75
 max_line_gap = 5
 
 #find the lines using hough transform
