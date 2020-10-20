@@ -22,21 +22,50 @@ pixel_vals = np.float32(pixel_vals)
 criteria  = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER,10,1.0)
 
 #implement k - means
-k = 4
-retval,labels ,centers = cv2.kmeans(pixel_vals,k,None,criteria,10,cv2.KMEANS_RANDOM_CENTERS)
+k1 = 2
+k2 = 4
+k3 = 6
+retval,labels ,centers = cv2.kmeans(pixel_vals,k1,None,criteria,10,cv2.KMEANS_RANDOM_CENTERS)
 
 #convert the data into 8 bit values
 centers = np.uint8(centers)
 segemented_data = centers[labels.flatten()]
 
 #reshape
-segemented_image = segemented_data.reshape((image_copy.shape))
+segemented_image1 = segemented_data.reshape((image_copy.shape))
 labels_reshape = labels.reshape(image_copy.shape[0],image_copy.shape[1])
 
-plt.title("K = 4")
-plt.imshow(segemented_image)
+retval,labels ,centers = cv2.kmeans(pixel_vals,k2,None,criteria,10,cv2.KMEANS_RANDOM_CENTERS)
 
-#plt.imshow(labels_reshape==1, cmap='gray')
+#convert the data into 8 bit values
+centers = np.uint8(centers)
+segemented_data = centers[labels.flatten()]
+
+#reshape
+segemented_image2 = segemented_data.reshape((image_copy.shape))
+labels_reshape = labels.reshape(image_copy.shape[0],image_copy.shape[1])
+
+retval,labels ,centers = cv2.kmeans(pixel_vals,k3,None,criteria,10,cv2.KMEANS_RANDOM_CENTERS)
+
+#convert the data into 8 bit values
+centers = np.uint8(centers)
+segemented_data = centers[labels.flatten()]
+
+#reshape
+segemented_image3 = segemented_data.reshape((image_copy.shape))
+labels_reshape = labels.reshape(image_copy.shape[0],image_copy.shape[1])
+
+plt.subplot(131)
+plt.title("K = 2")
+plt.imshow(segemented_image1)
+plt.subplot(132)
+plt.title("K = 4")
+plt.imshow(segemented_image2)
+plt.subplot(133)
+plt.title("K = 6")
+plt.imshow(segemented_image3)
+
+
 
 
 
