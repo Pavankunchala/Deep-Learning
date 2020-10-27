@@ -11,6 +11,8 @@ image_copy = cv2.cvtColor(image_copy,cv2.COLOR_BGR2RGB)
 
 plt.imshow(image_copy)
 
+plt.imshow(image)
+
 #conver the image to gray
 gray = cv2.cvtColor(image_copy,cv2.COLOR_RGB2GRAY)
 
