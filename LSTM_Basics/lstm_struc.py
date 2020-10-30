@@ -3,6 +3,7 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 from torch.autograd import  Variable
 
+
 # so that random variables will be consistent and repeatable for testing
 torch.manual_seed(2)
 
@@ -64,3 +65,4 @@ out, hidden = lstm(inputs, (h0, c0))
 
 print('out: \n', out)
 print('hidden: \n', hidden)
+
