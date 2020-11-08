@@ -5,7 +5,7 @@ class Car(object):
     
     # Car constructor 
     # Called when you write car.Car(_, _, _)
-    def __init__(self, position, velocity, world,color):
+    def __init__(self, position, velocity, world,color = 'r'):
         """Initializes Car with some position, velocity, and a world to traverse."""
         
         # Initialize the state
