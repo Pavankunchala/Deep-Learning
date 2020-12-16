@@ -2,7 +2,8 @@
 **Deep learning** is an AI function that mimics the workings of the human brain in processing data for use in detecting objects, recognizing speech, translating languages, and making decisions. Deep learning AI is able to learn without human supervision, drawing from data that is both unstructured and unlabeled
 
 
-* We will mainly be using **Tensorflow** for most of the code you can check it's tutorials from [here](https://www.tensorflow.org/tutorials)
+* We will mainly be using **Tensorflow**  for most of the code you can check it's tutorials from [here](https://www.tensorflow.org/tutorials)
+* For Deep learning with computer vision we mostly use **OpenCV** you can check it's documentation from [here](https://opencv.org/)
 
 
 ## Tensorflow
