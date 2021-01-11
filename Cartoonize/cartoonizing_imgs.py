@@ -8,7 +8,9 @@ Created on Wed Sep 23 10:02:04 2020
 import cv2
 import matplotlib.pyplot as plt
 
-image = cv2.imread('img.jpg')
+image = cv2.imread('pika.jpg')
+
+image = cv2.resize(image,(0,0),fx = 0.25 , fy = 0.25)
 
 def show_with_matplotlib(color_img,title,pos):
     

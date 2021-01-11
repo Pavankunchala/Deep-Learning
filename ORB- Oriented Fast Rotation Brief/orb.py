@@ -37,6 +37,8 @@ matches = sorted(matches, key = lambda x : x.distance)
 result = cv2.drawMatches(training_gray, keypoints_train, query_gray, keypoints_query,
                           matches[:100], query_gray, flags = 2)
 
+#result = cv2.cvtColor(result,cv2.COLOR_GRAY2BGR)
+
 plt.title('Best Matching Points')
 plt.imshow(result)
 plt.show()
