@@ -8,8 +8,7 @@ white = np.full([500,500],255,dtype=np.uint8)
 row1 = cv2.hconcat([white,black])
 row2 = cv2.hconcat([black,white])
 
-img = cv2.imread('chess1.png')
-cv2.imshow('img',img)
+cv2.imwrite("chess1.png",cv2.vconcat([row1,row2]))
 
 
 
