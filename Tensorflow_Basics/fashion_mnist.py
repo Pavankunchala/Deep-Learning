@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Flatten , Dense
-from tensorflow.python.ops.gen_math_ops import mod
+
 
 class CustomCallbacks(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch,logs ={}):
