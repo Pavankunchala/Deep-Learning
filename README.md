@@ -51,6 +51,8 @@ pip install --upgrade tensorflow
 
 ![alex-net](https://github.com/Pavankunchala/Deep-Learning/blob/master/Alexnet-OpenCV/alexnet_soln.png)
 
+* [Tensorflow-Basics](https://github.com/Pavankunchala/Deep-Learning/tree/master/Tensorflow_Basics)
+
 
 
 
