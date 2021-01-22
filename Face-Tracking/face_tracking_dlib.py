@@ -24,8 +24,17 @@ def draw_text_info():
         cv2.putText(frame, "detecting a face to initialize tracking...", menu_pos_2, cv2.FONT_HERSHEY_SIMPLEX, 0.5,
                     (0, 0, 255))
     
-capture = cv2.VideoCapture(0)
+capture = cv2.VideoCapture('test.mov')
 cv2.waitKey(0)
+
+frame_width = int(capture.get(3))
+frame_height = int(capture.get(4))
+
+size = (frame_width, frame_height)
+
+fourcc = cv2.cv.CV_FOURCC(*'MP4V')
+out = cv2.VideoWriter('output.mp4',fourcc, 20.0, size)
+
 
 #frontal face detector
 detector = dlib.get_frontal_face_detector()
@@ -81,6 +90,7 @@ while True:
         break
 
     # Show the resulting image:
+    out.write(frame)
     cv2.imshow("Face tracking using dlib frontal face detector and correlation filters for tracking", frame)
 
 # Release everything:

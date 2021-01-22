@@ -1,12 +1,21 @@
 import dlib # dlib for accurate face detection
 import cv2 # opencv
-import imutils # helper functions from pyimagesearch.com
+import imutils 
+import matplotlib.pyplot as plt
+import tensorflow as tf
+from tensorflow.keras.layers import Dense , Conv2D, MaxPooling2D
 
 # Grab video from your webcam
 stream = cv2.VideoCapture(0)
 
 # Face detector
 detector = dlib.get_frontal_face_detector()
+
+#frameWidth = int(stream.get(3))
+#frameHeight = int(stream.get(4))
+
+#out = cv2.VideoWriter('output.avi',cv2.VideoWriter_fourcc('M','J','P','G'),10,(frameWidth,frameHeight))
+
 
 # Fancy box drawing function by Dan Masek
 def draw_border(img, pt1, pt2, color, thickness, r, d):
@@ -35,7 +44,11 @@ def draw_border(img, pt1, pt2, color, thickness, r, d):
     
 count = 0
 
-while True:
+if (stream.isOpened() == False):
+    print("Error opening video stream or file")
+    
+
+while (stream.isOpened()):
     if count % 3 != 0:
         # read frames from live web cam stream
         (grabbed, frame) = stream.read()
@@ -63,6 +76,9 @@ while True:
 
         # make semi-transparent bounding box
         cv2.addWeighted(overlay, alpha, output, 1 - alpha, 0, output)
+        
+        #out.write(output)
+        
 
         # show the frame
         cv2.imshow("Face Detection", output)
@@ -77,5 +93,8 @@ while True:
         break
 
 # cleanup
+
+
+stream.release()
+
 cv2.destroyAllWindows()
-stream.stop()

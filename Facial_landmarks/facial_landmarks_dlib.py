@@ -101,7 +101,15 @@ detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(p)
 
 # Create VideoCapture object to get images from the webcam:
-video_capture = cv2.VideoCapture(0)
+video_capture = cv2.VideoCapture('test.mov')
+
+frame_width = int(video_capture.get(3))
+frame_height = int(video_capture.get(4))
+
+size = (frame_width, frame_height)
+
+fourcc = cv2.VideoWriter_fourcc(*"MP4V")
+out = cv2.VideoWriter('output.mp4',fourcc, 10, size)
 
 # You can use a test image for debugging purposes:
 test_face = cv2.imread("face_test.png")
@@ -116,7 +124,10 @@ while True:
     # frame = test_face.copy()
 
     # Convert frame to grayscale:
+    #frame = cv2.resize(frame,(0,0),fx = 0.5 , fy = 0.5)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    
+    
 
     # Detect faces:
     rects = detector(gray, 0)
@@ -150,7 +161,8 @@ while True:
         # draw_shape_points_pos_range(shape, frame, LEFT_EYE_POINTS + RIGHT_EYE_POINTS + NOSE_BRIDGE_POINTS)
 
     # Display the resulting frame
-    cv2.imshow("Landmarks detection using dlib", frame)
+    out.write(frame)
+    #cv2.imshow("Landmarks detection using dlib", frame)
 
     # Press 'q' key to exit
     if cv2.waitKey(1) & 0xFF == ord('q'):
