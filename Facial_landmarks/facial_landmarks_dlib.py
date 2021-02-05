@@ -109,7 +109,7 @@ frame_height = int(video_capture.get(4))
 size = (frame_width, frame_height)
 
 fourcc = cv2.VideoWriter_fourcc(*"MP4V")
-out = cv2.VideoWriter('output.mp4',fourcc, 10, size)
+out = cv2.VideoWriter('output.mp4',fourcc, 25, size)
 
 # You can use a test image for debugging purposes:
 test_face = cv2.imread("face_test.png")
@@ -143,14 +143,14 @@ while True:
         # Convert the shape to numpy array:
         shape = shape_to_np(shape)
 
-        # Draw all lines connecting the different face parts:
-        #draw_shape_lines_all(shape, frame)
+        #Draw all lines connecting the different face parts:
+        draw_shape_lines_all(shape, frame)
 
         # Draw jaw line:
         #draw_shape_lines_range(shape, frame, JAWLINE_POINTS)
 
         # Draw all points and their position:
-        # draw_shape_points_pos(shape, frame)
+        draw_shape_points_pos(shape, frame)
         # You can also use:
         # draw_shape_points_pos_range(shape, frame, ALL_POINTS)
 

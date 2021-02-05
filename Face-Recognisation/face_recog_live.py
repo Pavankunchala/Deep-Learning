@@ -5,10 +5,18 @@ import numpy as np
 
 
 # Get a reference to webcam #0 (the default one)
-video_capture = cv2.VideoCapture(0)
+video_capture = cv2.VideoCapture('test3.mp4')
+
+frame_width = int(video_capture.get(3))
+frame_height = int(video_capture.get(4))
+
+size = (frame_width, frame_height)
+
+fourcc = cv2.VideoWriter_fourcc(*"MP4V")
+out = cv2.VideoWriter('output.mp4',fourcc, 30, size)
 
 # Load a sample picture and learn how to recognize it.
-pavan_image = face_recognition.load_image_file("Pavan-1.jpg")
+pavan_image = face_recognition.load_image_file("am.png")
 pavan_face_encoding = face_recognition.face_encodings(pavan_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
@@ -24,7 +32,7 @@ known_face_encodings = [
 ]
 known_face_names = [
     "Barack Obama",
-    "Pavan Kunchala"
+    "Shalinedra"
 ]
 
 # Initialize some variables
@@ -88,7 +96,8 @@ while True:
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
     # Display the resulting image
-    cv2.imshow('Video', frame)
+    out.write(frame)
+    #cv2.imshow('Video', frame)
 
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):

@@ -25,16 +25,15 @@ def draw_text_info():
                     (0, 0, 255))
     
 capture = cv2.VideoCapture('test.mov')
-cv2.waitKey(0)
+
 
 frame_width = int(capture.get(3))
 frame_height = int(capture.get(4))
 
 size = (frame_width, frame_height)
 
-fourcc = cv2.cv.CV_FOURCC(*'MP4V')
-out = cv2.VideoWriter('output.mp4',fourcc, 20.0, size)
-
+fourcc = cv2.VideoWriter_fourcc(*"MP4V")
+out = cv2.VideoWriter('output.mp4',fourcc, 25, size)
 
 #frontal face detector
 detector = dlib.get_frontal_face_detector()
@@ -82,16 +81,16 @@ while True:
     key = 0xFF & cv2.waitKey(1)
 
     # Press '1' to re-initialie tracking (it will detect the face again):
-    if key == ord("1"):
-        tracking_face = False
+    #if key == ord("1"):
+     #   tracking_face = False
 
     # To exit, press 'q':
-    if key == ord('q'):
-        break
+    #if key == ord('q'):
+     #   break
 
     # Show the resulting image:
     out.write(frame)
-    cv2.imshow("Face tracking using dlib frontal face detector and correlation filters for tracking", frame)
+    #cv2.imshow("Face tracking using dlib frontal face detector and correlation filters for tracking", frame)
 
 # Release everything:
 capture.release()

@@ -6,15 +6,18 @@ import tensorflow as tf
 from tensorflow.keras.layers import Dense , Conv2D, MaxPooling2D
 
 # Grab video from your webcam
-stream = cv2.VideoCapture(0)
+stream = cv2.VideoCapture('test.mov')
 
 # Face detector
 detector = dlib.get_frontal_face_detector()
 
-#frameWidth = int(stream.get(3))
-#frameHeight = int(stream.get(4))
+frame_width = int(stream.get(3))
+frame_height = int(stream.get(4))
 
-#out = cv2.VideoWriter('output.avi',cv2.VideoWriter_fourcc('M','J','P','G'),10,(frameWidth,frameHeight))
+size = (frame_width, frame_height)
+
+fourcc = cv2.VideoWriter_fourcc(*"MP4V")
+out = cv2.VideoWriter('output.mp4',fourcc, 25, size)
 
 
 # Fancy box drawing function by Dan Masek
@@ -54,7 +57,7 @@ while (stream.isOpened()):
         (grabbed, frame) = stream.read()
 
         # resize the frames to be smaller and switch to gray scale
-        frame = imutils.resize(frame, width=700)
+        #frame = imutils.resize(frame, width=700)
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         # Make copies of the frame for transparency processing
@@ -72,16 +75,16 @@ while (stream.isOpened()):
             x1, y1, x2, y2, w, h = d.left(), d.top(), d.right() + 1, d.bottom() + 1, d.width(), d.height()
 
             # draw a fancy border around the faces
-            draw_border(overlay, (x1, y1), (x2, y2), (162, 255, 0), 2, 10, 10)
+            draw_border(overlay, (x1, y1), (x2, y2), (0, 255, 0), 2, 10, 10)
 
         # make semi-transparent bounding box
         cv2.addWeighted(overlay, alpha, output, 1 - alpha, 0, output)
         
-        #out.write(output)
+        out.write(output)
         
 
         # show the frame
-        cv2.imshow("Face Detection", output)
+        #cv2.imshow("Face Detection", output)
         key = cv2.waitKey(1) & 0xFF
         
     count +=1
