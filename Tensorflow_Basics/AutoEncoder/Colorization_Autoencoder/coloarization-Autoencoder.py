@@ -1,5 +1,4 @@
-from re import S
-from numpy.core.defchararray import encode
+
 import tensorflow as tf
 
 from tensorflow.keras.layers import Dense, Conv2D, Input , Flatten
