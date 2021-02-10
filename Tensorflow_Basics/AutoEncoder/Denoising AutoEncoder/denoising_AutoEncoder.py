@@ -1,7 +1,5 @@
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
 
 import tensorflow as tf
 
@@ -153,9 +151,5 @@ plt.title('Original images: top rows, '
 plt.imshow(imgs, interpolation='none', cmap='gray')
 Image.fromarray(imgs).save('corrupted_and_denoised.png')
 plt.show()
-
-
-
-
 
 
