@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import cv2
 import numpy as np
 
-image = cv2.imread('pika.jpg')
+image = cv2.imread('frames.png')
 
 image_copy = np.copy(image)
 
@@ -20,15 +20,14 @@ gray = cv2.cvtColor(image_copy,cv2.COLOR_RGB2GRAY)
 #cv2.imshow("The gray one",gray)
 
 #defining the lower and higher Thresholds for hysteries
-
-lower = 120
-higher =240
+lower = 80
+higher =100
 
 #canny
 
 edges = cv2.Canny(gray,lower,higher)
-wide = cv2.Canny(gray,30,100)
-tight = cv2.Canny(gray,180,240)
+wide = cv2.Canny(gray,5,120)
+#ight = cv2.Canny(gray,180,240)
 
 
 #cv2.imshow("Edges",edges)
@@ -41,11 +40,6 @@ tight = cv2.Canny(gray,180,240)
 
 
 plt.imshow(edges)
-plt.subplot(131)
-plt.imshow(wide)
-plt.subplot(132)
-plt.imshow(tight)
-plt.subplot(133)
 
 
 

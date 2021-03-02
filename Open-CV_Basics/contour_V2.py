@@ -82,7 +82,7 @@ plt.imshow(image[:,:,::-1])
 image = imageCopy.copy()
 
 for cnt in contours:
-    box = cv2.minAreaRect(cnt)
+    box = cv2.minAreaRect(cnt) + cv2.minAreaRect([0.5,0.5 ,0.5 ,0.5])
     boxPts = np.int0(cv2.boxPoints(box))
     
     cv2.drawContours(image, [boxPts], -1, (0,0,255), 2)
