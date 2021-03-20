@@ -53,6 +53,10 @@ pip install --upgrade tensorflow
 
 * [Tensorflow-Basics](https://github.com/Pavankunchala/Deep-Learning/tree/master/Tensorflow_Basics)
 
+* [Sparse-Optical-Flow](https://github.com/Pavankunchala/Deep-Learning/tree/master/Open-CV_Basics/Sparse-optical-flow)
+
+![sparse](https://github.com/Pavankunchala/Deep-Learning/blob/master/Open-CV_Basics/Sparse-optical-flow/sparse-optical-flow.gif)
+
 
 
 
