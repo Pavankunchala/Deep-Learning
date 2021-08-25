@@ -1,5 +1,5 @@
 pydot==1.4.1
-tensorflow==2.5.0
+tensorflow==2.5.1
 numpy==1.18.5
 matplotlib==3.3.2
 Pillow
