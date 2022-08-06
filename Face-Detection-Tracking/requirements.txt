@@ -2,7 +2,7 @@ matplotlib==3.3.2
 mtcnn==0.1.0
 scikit_image==0.17.2
 numpy==1.19.5
-streamlit==0.79.0
+streamlit==1.11.1
 numba==0.53.1
 filterpy==1.4.5
 opencv_python_headless==4.5.1.48
